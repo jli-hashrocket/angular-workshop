@@ -1,0 +1,20 @@
+<div ng-app="metalCollection" ng-controller="metalCollectionController">
+  <input type="hidden" name="albums" id="albums" value="<%= @albums %>">
+  <table>
+    <tr>
+      <th align="left">Artist</th>
+      <th align="left">Album</th>
+    </tr>
+    <tr ng-repeat="album in albums">
+      <td> {{ album.artist }}</td>
+      <td> {{ album.album}} </td>
+    </tr>
+  </table>
+  <div class="container" style="margin-top:30px">
+    <label>Name:</label>
+    <input type="text" name="artist-name" id="artist-name" />
+    <label>Album</label>
+    <input type="text" name="artist-album" id="artist-album" />
+    <button id="add-album" add-album>Add</button>
+  </div>
+</div>
