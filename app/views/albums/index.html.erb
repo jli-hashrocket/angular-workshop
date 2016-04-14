@@ -1,11 +1,10 @@
-<div ng-app="metalCollection" ng-controller="metalCollectionController">
-  <input type="hidden" name="albums" id="albums" value="<%= @albums %>">
+<div ng-app="metalCollection" ng-controller="metalCollectionController" ng-init="init(<%= @albums %>)">
   <table>
     <tr>
       <th align="left">Artist</th>
       <th align="left">Album</th>
     </tr>
-    <tr ng-repeat="album in albums">
+    <tr ng-repeat="album in albums" albums="albums">
       <td> {{ album.artist }}</td>
       <td> {{ album.album}} </td>
     </tr>
